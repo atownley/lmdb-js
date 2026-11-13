@@ -4,6 +4,8 @@
 [![get](https://img.shields.io/badge/get-8.5%20MOPS-yellow)](README.md)
 [![put](https://img.shields.io/badge/put-1.7%20MOPS-yellow)](README.md)
 
+> **Archistry maintenance release:** `@archistry/lmdb@2.8.5-archistry.1` is an exact LMDB 2.8.5 compatibility backport for safe `getValues()` iteration inside write transactions. It preserves the 2.8.5 API, native dependencies, and database format. The correction is proposed upstream in [lmdb-js#387](https://github.com/kriszyp/lmdb-js/pull/387). Install it under the existing dependency name with `npm install lmdb@npm:@archistry/lmdb@2.8.5-archistry.1`.
+
 This is an ultra-fast NodeJS, Bun, and Deno interface to LMDB; probably the fastest and most efficient key-value/database interface that exists for storage and retrieval of structured JS data (objects, arrays, etc.) in a true persisted, scalable, [ACID compliant](https://en.wikipedia.org/wiki/ACID) database. It provides a simple interface for interacting with LMDB, as a key-value db, that makes it easy to fully leverage the power, crash-proof design, and efficiency of LMDB using intuitive JavaScript, and is designed to scale across multiple processes or threads. Several key features that make it idiomatic, highly performant, and easy to use LMDB efficiently:
 * High-performance translation of JS values and data structures to/from binary key/value data
 * Queueing asynchronous off-thread write operations with promise-based API
