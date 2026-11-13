@@ -468,7 +468,7 @@ export function addReadMethods(LMDBStore, {
 							finishCursor();
 							return ITERATOR_DONE;
 						}
-						if (!valuesForKey || snapshot === false) {
+						if (!valuesForKey) {
 							if (keySize > 20000) {
 								if (keySize > 0x1000000)
 									lmdbError(keySize - 0x100000000)
